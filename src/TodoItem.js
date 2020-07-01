@@ -1,17 +1,16 @@
 import React from "react"
 
 
-function TodoItem(){
-    const styles = {
-        backgroundColor: "green",
-        color: "black",
-    }
-    return(
+
+function TodoItem(props) {
+
+    return (
         <div className="todo-item">
-            <p>Check this</p>
-            <input style={styles} type="checkbox"></input>
+            <input type="checkbox" checked={props.item.completed}></input>
+            <p>{props.item.text}</p>
+
         </div>
-        
+
 
     );
 }
